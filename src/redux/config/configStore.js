@@ -1,17 +1,11 @@
 import { createStore } from "redux";
 import { combineReducers } from "redux";
+import todos from "../modules/todos"
 
-const rootReducer = combineReducers(
-  [{
-    id : 1,
-    title : 'test title',
-    detail : 'test detail. this is sentence.'
-  },{
-    id : 1,
-    title : 'test title',
-    detail : 'test detail. this is sentence.'
-  },
-])
+
+const rootReducer = combineReducers({
+  todos,
+})
 ;
 const store = createStore(rootReducer);
 
