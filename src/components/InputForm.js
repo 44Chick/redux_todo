@@ -47,6 +47,12 @@ function InputForm() {
 
 export default InputForm;
 
+// color pallet
+const color = [
+  'rgba(100, 225, 255, 0.8)',
+  'rgba(255, 220, 100, 0.8)'
+]
+
 
 // style
 const FormBox = styled.form`
@@ -55,13 +61,16 @@ const FormBox = styled.form`
   border-radius: 10px;
   background-color: none;
   justify-content: space-between;
-  box-shadow: 0 10px 25px 0 rgba(100, 225, 255, 0.5);
+  box-shadow: 0 0px 15px 10px ${color[0]};
 `;
 
 const InputBox = styled.div`
   display: flex;
   gap: 20px;
   font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
 `;
 
 const TextBox = styled.input`
@@ -70,20 +79,25 @@ const TextBox = styled.input`
   border-radius: 10px;
   border: none;
   background-color: black;
-  box-shadow: 0 10px 25px 0 rgba(255, 220, 100, 0.5);
+  box-shadow: 0 0px 10px 5px ${color[1]};
+  height: 30px;
   color: white;
 `;
 
 const AddButton = styled.button`
-  width: 120px;
-  height: 30px;
-  justify-content: flex-end;
+  font-weight:bold;
   border-radius: 10px;
-  border: 5px solid ;
-  background-color: black;
+  border: 0.5px solid ${color[1]};
+  background: linear-gradient(180deg, black 75%, ${color[1]});
+  font-size: 14px;
+  width: 120px;
+  /* height: 40px; */
   color: white;
+  cursor: pointer;
   &:hover{
-    background-color: white;
-    color: black;
+    color: white;
+    background: linear-gradient(180deg, black 0%, ${color[1]});
+    text-shadow: -5px 0px 5px white, 5px 0px 5px white;
+    border: 2px solid ${color[1]};
   }
 `;

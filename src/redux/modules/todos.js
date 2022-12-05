@@ -1,16 +1,5 @@
 const initialState = {
-  todos: [
-    {
-      id: '1',
-      title: 'test title',
-      detail: 'test detail. this is sentence.',
-      done: false,
-    }, {
-      id: '2',
-      title: 'test title',
-      detail: 'test detail. this is sentence.',
-      done: false,
-    },],
+  todos: [],
   todo: {
     id: '0',
     title: "",
