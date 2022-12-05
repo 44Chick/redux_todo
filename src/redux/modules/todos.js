@@ -14,7 +14,6 @@ const ADD_TODO = "ADD_TODO";
 const DEL_TODO = "DEL_TODO";
 const DONE_TODO = "DONE_TODO";
 
-
 // action creator
 export const getById = (payload) => {
   return {
@@ -40,8 +39,6 @@ export const doneTodo = (payload) => {
     payload,
   }
 }
-
-
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
